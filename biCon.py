@@ -16,6 +16,7 @@ secret = config.secret
 
 client = Client(key, secret)
 
+print(client.account())
 # # depositHist = client.deposit_history()
 # # withdrawHist = client.withdraw_history()
 # # depositDF = pd.DataFrame(depositHist)
@@ -87,7 +88,7 @@ def myTrades(listOfSymbols = list, readableTime = False, csv = False):
     else: 
         return df
 
-myTrades(pairs, csv = True)
+myTrades(pairs, csv=True)
 
 # %%
 
