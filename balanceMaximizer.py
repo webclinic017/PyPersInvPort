@@ -53,7 +53,7 @@ tradeHistorydf = pd.read_csv("biCon.csv")
 
     
 
-def calculateAveragePrices(dataframe, csv = False):
+def calculateAveragePrices(dataframe = pd.DataFrame, csv = False):
 
     average = {
         "time": [],
@@ -77,7 +77,8 @@ def calculateAveragePrices(dataframe, csv = False):
     # bal_in_USDT    = 0
     # bal_in_ETH     = 0
     # bal_in_BTC     = 0
-    df = dataframe.sort_values(by='time',ascending=True)
+    df = dataframe.sort_values(by='time')
+    
 
     for i in range(len(df.loc[:,"time"])):     
         
