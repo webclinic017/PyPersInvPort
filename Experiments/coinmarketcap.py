@@ -23,8 +23,12 @@ session.headers.update(headers)
 try:
   response = session.get(url, params=parameters)
   data = json.loads(response.text)
-  pp.pprint(data)
+  # pp.pprint(data)
+  print(data.keys())
+  print(data['data'][1].keys())
 except (ConnectionError, Timeout, TooManyRedirects) as e:
   pp.pprint(e)
 
+
+# The data returned by 
 # %%
